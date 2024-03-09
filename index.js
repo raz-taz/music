@@ -18,10 +18,13 @@ const scopes = [
 
 
 const tokenEndpoint = "https://accounts.spotify.com/api/token"
-const REDIRECT_URI = "http://192.168.3.204:3002/callback"
+const REDIRECT_URI = "https://music-vbfd.onrender.com//callback"
+
+app.get('/', function (req, res){
+    res.send("Server's up!");
+}
 
 app.get('/login', function (req, res) {
-
     res.redirect(`https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${scopes.join("%20")}&response_type=code&show_dialog=true`)
 });
 app.get('/callback', function (req, res) {
@@ -55,5 +58,5 @@ app.get('/callback', function (req, res) {
  
 
 app.listen(port, () => {
-    console.log(`Hosted on: http://${host}:${port}`)
+    console.log(`Working..`)
 })
