@@ -22,7 +22,7 @@ const REDIRECT_URI = "https://music-vbfd.onrender.com//callback"
 
 app.get('/', function (req, res){
     res.send("Server's up!");
-}
+});
 
 app.get('/login', function (req, res) {
     res.redirect(`https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${scopes.join("%20")}&response_type=code&show_dialog=true`)
