@@ -18,7 +18,7 @@ const scopes = [
 
 
 const tokenEndpoint = "https://accounts.spotify.com/api/token"
-const REDIRECT_URI = "https://music-vbfd.onrender.com//callback"
+const REDIRECT_URI = "https://music-vbfd.onrender.com/callback"
 
 app.get('/', function (req, res){
     res.send("Server's up!");
