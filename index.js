@@ -33,7 +33,7 @@ app.get('/callback', function (req, res) {
     const code = req.query.code || null;
 
 
-    var authOptions = {
+    const authOptions = {
         url: 'https://accounts.spotify.com/api/token',
         data: {
             code: code,
